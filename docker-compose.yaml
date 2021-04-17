@@ -1,0 +1,33 @@
+version: '3'
+services:
+    app:
+      build: .
+      restart: always
+      ports:
+        - "8080:8080"
+      networks:
+        - sim_flutter
+      command: >
+            sh -c "flutter run -d web-server --web-port 8080 --web-hostname 0.0.0.0"
+    api:
+      image: monemmono/flutter_sim_workshop:1
+      environment:
+        - NODE_ENV=production
+      ports:
+        - "9090:9090"
+      networks:
+        - sim_flutter
+      depends_on:
+        - mongodb
+    mongodb:
+      image: mongo:4
+      ports:
+        - "27017:27017"
+      volumes:
+        - database:/data/db
+      networks:
+        - sim_flutter
+volumes:
+  database:
+networks:
+  sim_flutter:
