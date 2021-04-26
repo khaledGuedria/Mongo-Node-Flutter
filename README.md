@@ -1,6 +1,12 @@
 # my_app
 
 A new Flutter project.
+investigate :
+    -nginx reverse proxy
+    -traefik docker
+    -allow cross origin docker
+
+
 
 ## Getting Started
 

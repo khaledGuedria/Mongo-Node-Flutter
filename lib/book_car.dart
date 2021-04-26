@@ -31,8 +31,8 @@ class _BookCarState extends State<BookCar> {
 
 //util
   Future<bool> fetchedCar;
-  String getByIdUrl = "http://localhost:9090/car/";
-  String _baseImageURL = "http://localhost:9090/img/";
+  String getByIdUrl = "http://api:9090/car/";
+  String _baseImageURL = "http://api:9090/img/";
 
 //GET
 Future<bool> getCar() async {

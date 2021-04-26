@@ -8,8 +8,8 @@ import 'package:my_app/book_car.dart';
 
 class ListCar extends StatefulWidget{
   //var
-  String fetchAllURL = "http://localhost:9090/car/";
-  String _baseImageURL = "http://localhost:9090/img/";
+  String fetchAllURL = "http://api:9090/car/";
+  String _baseImageURL = "http://api:9090/img/";
 
   //constructor
   ListCar();

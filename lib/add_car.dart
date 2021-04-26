@@ -106,7 +106,7 @@ class _AddCarState extends State<AddCar> {
 
                   //ADD CAR MATHOD
                   //url
-                  String addURL = "http://localhost:9090/car";
+                  String addURL = "http://api:9090/car";
 
                   //HEADERS
                   Map<String, String> headers = {
